@@ -1,0 +1,112 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #eef1e8;
+    color: #263126;
+}
+.app {
+    width: min(100%, 520px);
+    margin: 0 auto;
+    padding: 24px 18px;
+}
+.app-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+.app-header h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+}
+.app-header p {
+    margin: 0;
+    color: #667066;
+}
+.connection-card,
+.mirror-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+.status {
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.status-disconnected { background: #f0f0f0; color: #666; }
+.status-connecting { background: #fff4d6; color: #765800; }
+.status-connected { background: #e2f2df; color: #2f6b2f; }
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+select,
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d4d8cf;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #fff;
+    color: #263126;
+}
+button {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.primary-button,
+#connectBtn,
+#saveBtn,
+#scanBtn {
+    background: #65743a;
+    color: #fff;
+}
+.secondary-button,
+#addQrBtn,
+#testQrBtn,
+#cancelBtn {
+    background: #e7eadf;
+    color: #39432a;
+    margin-top: 10px;
+}
+button:disabled {
+    opacity: .5;
+    cursor: default;
+}
+.connection-info { margin-top: 22px; }
+.hidden { display: none; }
+
+.qrbox {
+    min-height: 220px;
+    border: 3px dashed #65743a;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 16px 0;
+    background: #fafbf8;
+    padding: 20px;
+}
+.data {
+    font-size: .82rem;
+    font-family: monospace;
+    white-space: pre-wrap;
+    background: #f0f2eb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+    overflow: auto;
+}

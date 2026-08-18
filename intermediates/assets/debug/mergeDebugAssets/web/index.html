@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NaviVoge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="app">
+<header class="app-header">
+<h1>NaviVoge</h1>
+<p>Conecta tu Voge DS900X y proyecta tus aplicaciones.</p>
+</header>
+
+<section id="home" class="connection-card">
+<div id="homeStatus" class="status status-disconnected">Desconectado</div>
+
+<label for="vehicleSelect">Vehículo guardado</label>
+<select id="vehicleSelect">
+<option value="">No hay vehículos guardados</option>
+</select>
+
+<button id="connectBtn" class="primary-button" disabled>Conectar</button>
+<button id="addQrBtn" class="secondary-button">Agregar escaneando QR</button>
+</section>
+
+<section id="qrSection" class="connection-card hidden">
+<h2>Agregar vehículo</h2>
+<div id="qrBox" class="qrbox">
+Pulsa aquí para abrir la cámara<br>y escanear el QR de la Voge
+</div>
+<button id="scanBtn" class="primary-button">Escanear QR</button>
+<div id="qrStatus" class="status status-disconnected">Esperando escaneo…</div>
+<div id="qrData" class="data hidden"></div>
+
+<label for="vehicleName">Nombre del vehículo</label>
+<input id="vehicleName" placeholder="Ej.: Mi Voge DS900X">
+
+<button id="saveBtn" class="primary-button" disabled>Guardar vehículo</button>
+<button id="cancelBtn" class="secondary-button">Cancelar</button>
+</section>
+
+<section id="mirrorSection" class="mirror-card hidden">
+<h2>Mirroring</h2>
+<p>Selecciona cómo quieres utilizar NaviVoge.</p>
+<button class="secondary-button">Pantalla completa</button>
+<button class="secondary-button">Seleccionar aplicación</button>
+</section>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
